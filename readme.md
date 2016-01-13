@@ -16,4 +16,9 @@ How-to:
 - Run `$ node ./bin/www`
 - Open http://localhost:3000
 
+Image:
+------
+
+![Image](public/images/login.png)
+
 A tutorial will be available over at [my blog](http://yasoob.me/gci) shortly. Stay tuned!
