@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  if (!user)
+    a(href="/login") Login
+    br
+    a(href="/register") Register
+  if (user)
+    p You are currently logged in as #{user.username}
+    a(href="/logout") Logout
+    h3 Current list of users:
+    - each account in accounts
+      h4 
+        = account.username
