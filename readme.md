@@ -13,6 +13,7 @@ You need to have mongodb installed on your system. This application was tested o
 How-to:
 -------
 
-`node ./bin/www`
+- Run `$ node ./bin/www`
+- Open http://localhost:3000
 
 A tutorial will be available over at [my blog](http://yasoob.me/gci) shortly. Stay tuned!
