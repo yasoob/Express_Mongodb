@@ -14,3 +14,5 @@ How-to:
 -------
 
 `node ./bin/www`
+
+A tutorial will be available over at [my blog](http://yasoob.me/gci) shortly. Stay tuned!

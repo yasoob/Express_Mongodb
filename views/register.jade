@@ -2,15 +2,21 @@ extends layout
 
 block content
   .container
-    h1 Register Page
-    p.lead Say something worthwhile here.
-    br
-    form(role='form', action="/register",method="post", style='max-width: 300px;')
-      .form-group
-          input.form-control(type='text', name="username", placeholder='Enter Username')
-      .form-group
-        input.form-control(type='password', name="password", placeholder='Password')
-      button.btn.btn-default(type='submit') Submit
-      &nbsp;
-      a(href='/')
-        button.btn.btn-primary(type="button") Cancel
+    .row
+      .twelve.columns(style='margin-top:10%')
+        form(role='form', action="/register",method="post")
+          .row
+            .twelve.columns 
+              h4(style='font-weight:bold; border-bottom:3px solid black; display:inline-block') Register
+            if (err)
+              .twelve.columns
+                p(style='padding: 5px 15px;background-color: #EC6464;border-radius: 5px;color: white;')
+                  = err
+            .twelve.columns(style='margin-top:20px')
+              label Your Email
+              input.u-full-width(type='text', name="username", placeholder='Enter Username')
+            .twelve.columns
+              label Your Password
+              input.u-full-width(type='password', name="password", placeholder='Password')
+          input.button-primary(type='submit', value='Submit')
+          p If you have already registered before then go <a href="/login">here.</a>

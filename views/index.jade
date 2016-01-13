@@ -2,23 +2,26 @@ extends layout
 
 block content
   if (!user)
-    .container
+    .container(style='margin-top: 10%')
       .row
         .one-half.column
-        h4 Welcome
-        p.
-          You can only view the all-user list after you login. If you haven't already made an account on my website then you can easily do so by clicking the appropriate button below!.
-        a(href="/login" class="button button-primary") Login
-        br
-        a(href="/register" class="button button-primary") Register
+          h4 Welcome
+          p.
+            You can only view the all-user list after you login. If you haven't already made an account on my website then you can easily do so by clicking the appropriate button below!.
+          a(href="/login" class="button button-primary" style="width:150px;") Login
+          br
+          a(href="/register" class="button button-primary" style="width:150px;") Register
   if (user)
     .container
       .row
-        .one-half.column
+        .one-half.column(style='margin-top:5%')
           p You are currently logged in as #{user.username}
-          a(href="/logout") Logout
-      .row
-          h3 Current list of users:
-          - each account in accounts
-            h4 
-              = account.username
+          a(href="/logout", style='display:block;margin-top:-20px;') Logout
+      .row(style='margin-top:5%;')
+          h4 Current list of users:
+          table(class="u-full-width")
+            tbody
+              - each account in accounts
+                tr
+                  td 
+                    = account.username

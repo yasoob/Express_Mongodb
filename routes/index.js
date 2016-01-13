@@ -18,7 +18,7 @@ router.get('/register', function(req, res) {
 router.post('/register', function(req, res) {
     Account.register(new Account({ username : req.body.username }), req.body.password, function(err, account) {
         if (err) {
-            return res.render('register', { account : account });
+            return res.render('register', { account : account ,err:err});
         }
 
         passport.authenticate('local')(req, res, function () {
@@ -38,10 +38,6 @@ router.post('/login', passport.authenticate('local'), function(req, res) {
 router.get('/logout', function(req, res) {
     req.logout();
     res.redirect('/');
-});
-
-router.get('/ping', function(req, res){
-    res.status(200).send("pong!");
 });
 
 module.exports = router;
