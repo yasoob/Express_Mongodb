@@ -1,6 +1,6 @@
 {
-  "name": "express_node_quick",
-  "version": "0.0.0",
+  "name": "Express_Mongodb",
+  "version": "0.0.1",
   "private": true,
   "scripts": {
     "start": "node ./bin/www"

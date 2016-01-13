@@ -2,13 +2,23 @@ extends layout
 
 block content
   if (!user)
-    a(href="/login") Login
-    br
-    a(href="/register") Register
+    .container
+      .row
+        .one-half.column
+        h4 Welcome
+        p.
+          You can only view the all-user list after you login. If you haven't already made an account on my website then you can easily do so by clicking the appropriate button below!.
+        a(href="/login" class="button button-primary") Login
+        br
+        a(href="/register" class="button button-primary") Register
   if (user)
-    p You are currently logged in as #{user.username}
-    a(href="/logout") Logout
-    h3 Current list of users:
-    - each account in accounts
-      h4 
-        = account.username
+    .container
+      .row
+        .one-half.column
+          p You are currently logged in as #{user.username}
+          a(href="/logout") Logout
+      .row
+          h3 Current list of users:
+          - each account in accounts
+            h4 
+              = account.username
