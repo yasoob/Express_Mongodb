@@ -1,7 +1,7 @@
 Express_Mongodb
 ---------------
 
-Hi there! This is a small application which makes use of Express framework and Mongoose to register users. This application was partially made by following the tutorial from [here](http://mherman.org/blog/2015/01/31/local-authentication-with-passport-and-express-4/)
+Hi there! This is a small application which makes use of Express framework and Mongoose to register users. This application was partially made by following the tutorial from [here](http://mherman.org/blog/2015/01/31/local-authentication-with-passport-and-express-4/) but a LOT of modifications and improvements have been done.
 
 This project was done for FOSSASIA under the umbrella of GCI (Google Code In).
 
