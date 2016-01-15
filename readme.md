@@ -13,6 +13,7 @@ You need to have mongodb installed on your system. This application was tested o
 How-to:
 -------
 
+- Isntall dependencies `$ npm install`
 - Run `$ node ./bin/www`
 - Open http://localhost:3000
 
